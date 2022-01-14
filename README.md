@@ -15,3 +15,6 @@ threading._start_new_thread(count, ())
 input("Click enter to cancel counting")
 time.cancel()
 ```
+
+# To do
+Add more functions such as input()
