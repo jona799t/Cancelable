@@ -1,11 +1,24 @@
+import time as TIME
+
+shouldCancelSleep = False
+
 class time:
     def sleep(seconds):
-        endSleep = time.time() + seconds
+        global shouldCancelSleep
+        shouldCancelSleep = False
+
+        endSleep = TIME.time() + seconds
         while True:
             if shouldCancelSleep:
                 break
-            if time.time() >= endSleep:
+            if TIME.time() >= endSleep:
                 break
 
-#Lav det til et module som også understøtter input()
-#Det skal bruges til programmer hvor man skal kunne annullere en thread
+    def cancel():
+        global shouldCancelSleep
+        shouldCancelSleep = True
+
+class input:
+    def __init__(self, question):
+        print(question)
+        print("Not supported yet")
