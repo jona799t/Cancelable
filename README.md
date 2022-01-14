@@ -33,7 +33,7 @@ threading._start_new_thread(count, ())
 
 input("Click enter to cancel counting\n")
 
-time.cancel()
+cancelableTime.cancel()
 ```
 
 # To do
