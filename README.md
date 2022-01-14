@@ -7,12 +7,13 @@ def count():
   i = 1
   while True:
     time.sleep(1)
-    i += 1
     print(i)
+    i += 1
 
 threading._start_new_thread(count, ())
 
-input("Click enter to cancel counting")
+input("Click enter to cancel counting\n")
+
 time.cancel()
 ```
 
