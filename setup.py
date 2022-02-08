@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from pathlib import Path
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'A package that allows to cancel, certain functions that can be a pain, when working with threading.'
 long_description = (Path(__file__).parent / "README.md").read_text()
 
@@ -14,6 +14,7 @@ setup(
     url = 'https://github.com/jona799t/Cancelable',
     description=DESCRIPTION,
     long_description=long_description,
+    license_files = ('LICENSE.txt',),
     long_description_content_type='text/markdown',
     packages=find_packages(),
     install_requires=[],
