@@ -1,5 +1,11 @@
+# Installation
+```
+pip install cancelable-py
+```
+
 # Usage
 Without the normal time package:
+
 ```python
 from cancelable import time
 import threading
