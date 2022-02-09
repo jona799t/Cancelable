@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 from pathlib import Path
 
-VERSION = '0.0.2'
+VERSION = '0.0.3'
 DESCRIPTION = 'A package that allows to cancel, certain functions that can be a pain, when working with threading.'
 long_description = (Path(__file__).parent / "README.md").read_text()
 
 # Setting up
 setup(
-    name="cancelable-py",
+    name="cancelable",
     version=VERSION,
     author="jona799t",
     #author_email="<not@available.com>",

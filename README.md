@@ -1,6 +1,6 @@
 # Installation
 ```
-pip install cancelable-py
+pip install cancelable
 ```
 
 # Usage
