@@ -5,7 +5,7 @@ pip install cancelable
 
 # Usage
 Without the normal time package:
-
+## Sleep
 ```python
 from cancelable import time
 import threading
@@ -40,6 +40,25 @@ threading._start_new_thread(count, ())
 input("Click enter to cancel counting\n")
 
 cancelableTime.cancel()
+```
+
+## Input
+```python
+from cancelable import time, input, cancelInput
+import threading
+
+name = ""
+def ask():
+  global name
+  name = input("Your name: ")
+  time.cancel()
+
+threading._start_new_thread(ask, ())
+
+time.sleep(5)
+cancelInput()
+
+print(name)
 ```
 
 # To do

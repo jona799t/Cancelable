@@ -1,24 +1,6 @@
-import time as TIME
+from cancelable import time, input
+from cancelable import input as _input
 
-shouldCancelSleep = False
-
-class time:
-    def sleep(seconds):
-        global shouldCancelSleep
-        shouldCancelSleep = False
-
-        endSleep = TIME.time() + seconds
-        while True:
-            if shouldCancelSleep:
-                break
-            if TIME.time() >= endSleep:
-                break
-
-    def cancel():
-        global shouldCancelSleep
-        shouldCancelSleep = True
-
-class input:
-    def __init__(self, question):
-        print(question)
-        print("Not supported yet")
+time = time.TimeHandler
+input = _input.InputHandler
+cancelInput = _input.cancel
